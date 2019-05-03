@@ -13,7 +13,7 @@ formSelector.addEventListener('submit', (e)=>{
     e.preventDefault()
     searchValue = searchInput.value
 
-    fetch("http://localhost:3000/weather?address="+searchValue).then((response)=>{
+    fetch("/weather?address="+searchValue).then((response)=>{
         response.json().then((data)=>{
             outputWeather1.textContent = data.location
             outputWeather2.textContent = data.temperature
